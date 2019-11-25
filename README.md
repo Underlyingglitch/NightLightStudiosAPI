@@ -15,7 +15,7 @@ With the following JSON encoded data:
 This can return the following data:
 
 Input | HTTP code | JSON response | Explaination
---- | --- | ---
+--- | --- | --- | ---
 *Still* | `renders` | **nicely**
 `{"email": ""}` (or nothing at all) | **503** | `{"message": "empty"}` | if "email" is not specified, or empty string
 `{"email": "this is some text"}` | **400** | `{"message": "noemail"}` | if the value of "email" is not a valid emailaddress
