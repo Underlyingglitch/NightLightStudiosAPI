@@ -22,3 +22,6 @@ Input | HTTP code | JSON response | Explaination
 `{"email": "notexist@test.com"}` | **404** | `{"message": "false"}` | if user does not exist in DB
 `{"email": "testuser@test.com"}` | **409** | `{"message": "multiple"}` | if useremail does exist, but DB returns multiple values
 `{"email": "testuser@test.com"}` | **200** | `{"message": "true"}` | if user exists in DB
+
+##Check user password
+Under construction
