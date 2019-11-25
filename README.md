@@ -23,5 +23,5 @@ Input | HTTP code | JSON response | Explaination
 `{"email": "testuser@test.com"}` | **409** | `{"message": "multiple"}` | if useremail does exist, but DB returns multiple values
 `{"email": "testuser@test.com"}` | **200** | `{"message": "true"}` | if user exists in DB
 
-##Check user password
+## Check user password
 Under construction
