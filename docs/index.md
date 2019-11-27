@@ -39,5 +39,6 @@ This can return the following data:
 
 Input | HTTP code | JSON response | Explaination
 --- | --- | --- | ---
-`{"email": "testuser@test.com", "password": "test1234"}` | **200** | `{"message": "correct"}` | if user exists in DB and password is correct
+`{"email": "testuser@test.com", "password": "test1234"}` | **200** | `{"message": "correct", "authToken": "randomtoken"}` | if user exists in DB and password is correct
+`{"email": "testuser@test.com", "password": "test1234"}` | **500** | `{"message": "unexpectederror"}` | if server DB insert failed!
 `{"email": "testuser@test.com", "password": "incorrect"}` | **401** | `{"message": "wrongpassword"}` | if user exists in DB but password is incorrect
