@@ -40,4 +40,4 @@ This can return the following data:
 Input | HTTP code | JSON response | Explaination
 --- | --- | --- | ---
 `{"email": "testuser@test.com", "password": "test1234"}` | **200** | `{"message": "correct"}` | if user exists in DB and password is correct
-`{"email": "testuser@test.com", "password": "incorrect"}` | **401** | `{"message": "worngpassword"}` | if user exists in DB but password is incorrect
+`{"email": "testuser@test.com", "password": "incorrect"}` | **401** | `{"message": "wrongpassword"}` | if user exists in DB but password is incorrect
