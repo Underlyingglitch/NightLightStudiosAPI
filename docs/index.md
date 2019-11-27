@@ -1,7 +1,25 @@
 # StellaMarisAPI
 
-## Check user existance 
+## Getting Started
+### API URL 
+To use the API, you need to send a request to the following URL:
 
+`http://stellamaris.rickokkersen.myds.me/api/v2/{object}/{action}.php`
+
+For example, to get the data for a user, use the 'user' object like this:
+
+`http://stellamaris.rickokkersen.myds.me/api/v2/user/{action}.php`
+
+### Possible objects
+This is a list of the existing objects:
+* user (get/push information about a user)
+
+### API authentication 
+
+Because we are dealing with sensitive data about people, you need to verify your API request. You can do this using an API key. In every request, you need to use `{"api_key": "your api key"}`. To get an API key, get in touch with us.
+
+## user
+### Check user existance
 Send a request to
 
 `http://stellamaris.rickokkersen.myds.me/api/v2/user/check.php`
@@ -24,7 +42,7 @@ Input | HTTP code | JSON response | Explaination
 `{"api_key": "correctkey", "email": "testuser@test.com"}` | **200** | `{"message": "true"}` | if user exists in DB
 `{"api_key": "wrongkey", "email": "testuser@test.com"}` | **401** | `{"message": "wrongapikey"}` | if API key is not valid
 
-## Check user password
+### Check user password
 
 Send a request to
 
