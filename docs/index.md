@@ -44,5 +44,5 @@ Input | HTTP code | JSON response | Explaination
 --- | --- | --- | ---
 `{"api_key": "correctkey", "email": "testuser@test.com", "password": "test1234"}` | **200** | `{"message": "correct", "authToken": "randomtoken"}` | if user exists in DB and password is correct
 `{"api_key": "correctkey", "email": "testuser@test.com", "password": "test1234"}` | **500** | `{"message": "unexpectederror"}` | if server DB insert failed!
-`{"api_key": "correctkey", "email": "testuser@test.com", "password": "incorrect"}` | **401** | `{"message": "wrongpassword"}` | if user exists in DB but password is incorrect
+`{"api_key": "correctkey", "email": "testuser@test.com", "password": "incorrect"}` | **400** | `{"message": "wrongpassword"}` | if user exists in DB but password is incorrect
 `{"api_key": "wrongkey", "email": "testuser@test.com", "password": "test1234"}` | **401** | `{"message": "wrongapikey"}` | if API key is invalid
