@@ -12,6 +12,7 @@ For example, to get the data for a user, use the 'user' object like this:
 
 ### Possible objects
 This is a list of the existing objects:
+
 - user (get/push information about a user)
 
 ### API authentication 
