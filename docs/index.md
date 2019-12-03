@@ -1,4 +1,4 @@
-# StellaMarisAPI
+# BigBrainTime API
 
 ## Getting Started
 ### API URL 
@@ -23,7 +23,7 @@ Because we are dealing with sensitive data about people, you need to verify your
 ### Check user existance
 Send a request to
 
-`http://stellamaris.rickokkersen.myds.me/api/v2/user/check.php`
+`http://stellamaris.rickokkersen.myds.me/api/v2/user/checkemail.php`
 
 With the following JSON encoded data:
 ```
