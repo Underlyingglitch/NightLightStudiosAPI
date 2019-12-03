@@ -65,3 +65,18 @@ Input | HTTP code | JSON response | Explaination
 `{"api_key": "correctkey", "email": "testuser@test.com", "password": "test1234"}` | **500** | `{"message": "unexpectederror"}` | if server DB insert failed!
 `{"api_key": "correctkey", "email": "testuser@test.com", "password": "incorrect"}` | **400** | `{"message": "wrongpassword"}` | if user exists in DB but password is incorrect
 `{"api_key": "wrongkey", "email": "testuser@test.com", "password": "test1234"}` | **401** | `{"message": "wrongapikey"}` | if API key is invalid
+
+### Check user token (check login status)
+
+Send a request to:
+
+`http://stellamaris.rickokkersen.myds.me/api/v2/user/checktoken.php`
+
+With the following JSON encoded data:
+
+```
+{
+  "api_key": "apikey",
+  "authToken": "usertoken"
+}
+```
