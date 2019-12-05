@@ -4,11 +4,11 @@
 ### API URL 
 To use the API, you need to send a request to the following URL:
 
-`http://stellamaris.rickokkersen.myds.me/api/v2/{object}/{action}.php`
+`http://litelearn.rickokkersen.myds.me/api/v2/{object}/{action}.php`
 
 For example, to get the data for a user, use the 'user' object like this:
 
-`http://stellamaris.rickokkersen.myds.me/api/v2/user/{action}.php`
+`http://litelearn.rickokkersen.myds.me/api/v2/user/{action}.php`
 
 ### Possible objects
 This is a list of the existing objects:
@@ -23,7 +23,7 @@ Because we are dealing with sensitive data about people, you need to verify your
 ### Check user existance
 Send a request to
 
-`http://stellamaris.rickokkersen.myds.me/api/v2/user/checkemail.php`
+`http://litelearn.rickokkersen.myds.me/api/v2/user/checkemail.php`
 
 With the following JSON encoded data:
 ```
@@ -47,7 +47,7 @@ Input | HTTP code | JSON response | Explaination
 
 Send a request to
 
-`http://stellamaris.rickokkersen.myds.me/api/v2/user/checkpassword.php`
+`http://litelearn.rickokkersen.myds.me/api/v2/user/checkpassword.php`
 
 With the following JSON encoded data:
 ```
@@ -70,7 +70,7 @@ Input | HTTP code | JSON response | Explaination
 
 Send a request to:
 
-`http://stellamaris.rickokkersen.myds.me/api/v2/user/checktoken.php`
+`http://litelearn.rickokkersen.myds.me/api/v2/user/checktoken.php`
 
 With the following JSON encoded data:
 
