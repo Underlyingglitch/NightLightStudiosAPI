@@ -34,14 +34,14 @@ With the following JSON encoded data:
 ```
 This can return the following data:
 
-Input | HTTP code | JSON response | Explaination
---- | --- | --- | ---
-`{"api_key": "correctkey", "email": ""}` (or nothing at all) | **503** | `{"message": "empty"}` | if "email" is not specified, or empty string
-`{"api_key": "correctkey", "email": "this is some text"}` | **400** | `{"message": "noemail"}` | if the value of "email" is not a valid emailaddress
-`{"api_key": "correctkey", "email": "notexist@test.com"}` | **404** | `{"message": "false"}` | if user does not exist in DB
-`{"api_key": "correctkey", "email": "testuser@test.com"}` | **409** | `{"message": "multiple"}` | if useremail does exist, but DB returns multiple values
-`{"api_key": "correctkey", "email": "testuser@test.com"}` | **200** | `{"message": "true"}` | if user exists in DB
-`{"api_key": "wrongkey", "email": "testuser@test.com"}` | **401** | `{"message": "wrongapikey"}` | if API key is not valid
+HTTP code | JSON response | Explaination
+--- | --- | ---
+**503** | `{"message": "empty"}` | if "email" is not specified, or empty string
+**400** | `{"message": "noemail"}` | if the value of "email" is not a valid emailaddress
+**404** | `{"message": "false"}` | if user does not exist in DB
+**409** | `{"message": "multiple"}` | if useremail does exist, but DB returns multiple values
+**200** | `{"message": "true"}` | if user exists in DB
+**401** | `{"message": "wrongapikey"}` | if API key is not valid
 
 ### Check user password
 
@@ -59,12 +59,12 @@ With the following JSON encoded data:
 ```
 This can return the following data:
 
-Input | HTTP code | JSON response | Explaination
---- | --- | --- | ---
-`{"api_key": "correctkey", "email": "testuser@test.com", "password": "test1234"}` | **200** | `{"message": "correct", "authToken": "randomtoken"}` | if user exists in DB and password is correct
-`{"api_key": "correctkey", "email": "testuser@test.com", "password": "test1234"}` | **500** | `{"message": "unexpectederror"}` | if server DB insert failed!
-`{"api_key": "correctkey", "email": "testuser@test.com", "password": "incorrect"}` | **400** | `{"message": "wrongpassword"}` | if user exists in DB but password is incorrect
-`{"api_key": "wrongkey", "email": "testuser@test.com", "password": "test1234"}` | **401** | `{"message": "wrongapikey"}` | if API key is invalid
+HTTP code | JSON response | Explaination
+--- | --- | ---
+**200** | `{"message": "correct", "authToken": "randomtoken"}` | if user exists in DB and password is correct
+**500** | `{"message": "unexpectederror"}` | if server DB insert failed!
+**400** | `{"message": "wrongpassword"}` | if user exists in DB but password is incorrect
+**401** | `{"message": "wrongapikey"}` | if API key is invalid
 
 ### Check user token (check login status)
 
@@ -82,12 +82,38 @@ With the following JSON encoded data:
 ```
 This can return the following data:
 
-Input | HTTP code | JSON response | Explaination
---- | --- | --- | ---
-`{"api_key": "correctkey", "authToken": ""}` (or `{"authToken": "null"}` | **400** | `{"message": "notoken"}` | if token is not set, or set to null
-`{"api_key": "correctkey", "authToken": "validtoken"}` | **200** | `{"message": "valid"}` | if token is valid
-`{"api_key": "correctkey", "authToken": "invalidtoken"}` | **403** | `{"message": "invalid"}` | if token is not valid
-`{"api_key": "wrongkey", "authToken": "validtoken"}` | **401** | `{"message": "wrongapikey"}` | if API key is invalid
+HTTP code | JSON response | Explaination
+--- | --- | ---
+**400** | `{"message": "notoken"}` | if token is not set, or set to null
+**200** | `{"message": "valid"}` | if token is valid
+**403** | `{"message": "invalid"}` | if token is not valid
+**401** | `{"message": "wrongapikey"}` | if API key is invalid
+
+### User sign up
+
+Send a request to:
+
+`http://stellamaris.rickokkersen.myds.me/api/v2/user/signup.php`
+
+With the following JSON encoded data:
+
+```
+{
+  "api_key": "apikey",
+  "first_name": "firstname",
+  "last_name": "lastname",
+  "email": "emailaddress",
+  "password": "plaintextpassword"
+}
+```
+This can return the following data:
+
+HTTP code | JSON response | Explaination
+--- | --- | ---
+**201** | `{"message": "created"}` | User successfully created
+**503** | `{"message": "error"}` | DB error, user not created
+**400** | `{"message": "dataincomplete"}` | Not all fields are filled in
+**401** | `{"message": "wrongapikey"}` | If API key is invalid
 
 # NightLight Studios IOS App
 ## Sign Up
