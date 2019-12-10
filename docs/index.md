@@ -88,3 +88,5 @@ Input | HTTP code | JSON response | Explaination
 `{"api_key": "correctkey", "authToken": "validtoken"}` | **200** | `{"message": "valid"}` | if token is valid
 `{"api_key": "correctkey", "authToken": "invalidtoken"}` | **403** | `{"message": "invalid"}` | if token is not valid
 `{"api_key": "wrongkey", "authToken": "validtoken"}` | **401** | `{"message": "wrongapikey"}` | if API key is invalid
+
+# NightLight Studios IOS App
