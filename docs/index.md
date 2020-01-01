@@ -1,5 +1,7 @@
 # NightLight Studios API
 
+[![main](https://img.shields.io/npm/v/github-buttons)](https://www.npmjs.com/github-buttons)
+
 ## Getting Started
 ### API URL 
 To use the API, you need to send a request to the following URL:
