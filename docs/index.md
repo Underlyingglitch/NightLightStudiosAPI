@@ -14,6 +14,7 @@ For example, to get the data for a user, use the 'user' object like this:
 This is a list of the existing objects:
 
 - user (get/push information about a user)
+- iao (get/push information about Ins and Outs)
 
 ### API authentication 
 
