@@ -1,7 +1,5 @@
 # NightLight Studios API
 
-[![main](https://img.shields.io/npm/v/github-buttons)](https://www.npmjs.com/github-buttons)
-
 ## Getting Started
 ### API URL 
 To use the API, you need to send a request to the following URL:
@@ -16,7 +14,7 @@ For example, to get the data for a user, use the 'user' object like this:
 This is a list of the existing objects:
 
 - user (get/push information about a user)
-- iao (get/push information about Ins and Outs)
+- iao (get/push information about Ins and Outs) - Coming Soon
 
 ### API authentication 
 
@@ -128,3 +126,6 @@ Status code | Friendly name | Explaination
 `1x2` | URLSession.shared.dataTask error | When the application is unable to send a request to the server
 `1x3` | JSON parsing error | When the response (JSON) cannot be parsed into an object
 `1x4` | JSONSerialization.jsonObject error | When the application cannot successfullt get the JSON string
+
+## iao
+Comming soon!!
