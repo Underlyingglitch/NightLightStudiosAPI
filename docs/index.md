@@ -128,4 +128,4 @@ Status code | Friendly name | Explaination
 `1x4` | JSONSerialization.jsonObject error | When the application cannot successfullt get the JSON string
 
 ## iao
-Comming soon!!
+Coming soon!!
