@@ -116,16 +116,15 @@ HTTP code | JSON response | Explaination
 **400** | `{"message": "dataincomplete"}` | Not all fields are filled in
 **401** | `{"message": "wrongapikey"}` | If API key is invalid
 
-# NightLight Studios IOS App
-## Sign Up
-When a user signs up through the app. A request is sent to our server. This can go wrong at many points, here are some possible outputs!
-
-Status code | Friendly name | Explaination
--- | -- | --
-`1x1` | JSON to request.httpBody error | When the values of the user input fields cannot be processed into the request.httpBody
-`1x2` | URLSession.shared.dataTask error | When the application is unable to send a request to the server
-`1x3` | JSON parsing error | When the response (JSON) cannot be parsed into an object
-`1x4` | JSONSerialization.jsonObject error | When the application cannot successfullt get the JSON string
-
 ## iao
 Coming soon!!
+
+### Get all posts
+
+### Get one post
+
+### Create post
+
+### Delete post
+
+### Report post
