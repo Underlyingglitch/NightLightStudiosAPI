@@ -94,7 +94,7 @@ HTTP code | JSON response | Explaination
 
 Send a request to:
 
-`http://stellamaris.rickokkersen.myds.me/api/v2/user/signup.php`
+`http://litelearn.rickokkersen.myds.me/api/v2/user/signup.php`
 
 With the following JSON encoded data:
 
@@ -122,7 +122,7 @@ Coming soon!!
 ### Get all posts
 Send a request to:
 
-`http://litelearn.ga/api/v2/iao/getall.php`
+`http://litelearn.rickokkersen.myds.me/api/v2/iao/getall.php`
 
 With the following JSON encoded data:
 
