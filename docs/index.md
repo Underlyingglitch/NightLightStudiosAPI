@@ -120,6 +120,24 @@ HTTP code | JSON response | Explaination
 Coming soon!!
 
 ### Get all posts
+Send a request to:
+
+`http://litelearn.ga/api/v2/iao/getall.php`
+
+With the following JSON encoded data:
+
+```
+{
+  "api_key": "apikey"
+}
+```
+This can return the following data:
+
+HTTP code | JSON response | Explaination
+--- | --- | ---
+**200** | `{...array of posts...}` | JSON array containing all post data
+**404** | `{"message": "notfound"}` | No posts were found
+**401** | `{"message": "wrongapikey"}` | If API key is invalid
 
 ### Get one post
 
