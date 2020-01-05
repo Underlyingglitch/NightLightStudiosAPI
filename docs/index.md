@@ -139,7 +139,47 @@ HTTP code | JSON response | Explaination
 **404** | `{"message": "notfound"}` | No posts were found
 **401** | `{"message": "wrongapikey"}` | If API key is invalid
 
+Unlike previous requests, this request returns an array of data. You will have to decode this yourself. The data will look something like this:
+```
+{
+  "id": "1",
+  "title": "titletext",
+  "body": "bodytext",
+  "cat": "categoryname",
+  "date": "yyyy-mm-dd HH:MM:SS",
+  "user": "fullname"
+},
+{
+  "id": "1",
+  "title": "titletext",
+  "body": "bodytext",
+  "cat": "categoryname",
+  "date": "yyyy-mm-dd HH:MM:SS",
+  "user": "fullname"
+}
+```
+
 ### Get one post
+Send a request to:
+
+`http://litelearn.rickokkersen.myds.me/api/v2/iao/getone.php`
+
+With the following JSON encoded data:
+
+```
+{
+  "api_key": "apikey",
+  "post_id": "post_id"
+}
+```
+
+This can return the following data:
+
+HTTP code | JSON response | Explaination
+--- | --- | ---
+**200** | `{...post details...}` | Post data
+**404** | `{"message": "notfound"}` | The requested post was'nt found in the DB
+**401** | `{"message": "wrongapikey"}` | If API key is invalid
 
 ### Create post
 
