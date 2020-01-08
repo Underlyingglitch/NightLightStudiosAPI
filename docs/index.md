@@ -104,7 +104,8 @@ With the following JSON encoded data:
   "first_name": "firstname",
   "last_name": "lastname",
   "email": "emailaddress",
-  "password": "plaintextpassword"
+  "password": "plaintextpassword",
+  "repeatpassword": "repeatpassword"
 }
 ```
 This can return the following data:
@@ -114,6 +115,8 @@ HTTP code | JSON response | Explaination
 **201** | `{"message": "created"}` | User successfully created
 **503** | `{"message": "error"}` | DB error, user not created
 **400** | `{"message": "dataincomplete"}` | Not all fields are filled in
+**403** | `{"message": "exists"}` | There already is a user with that email
+**409** | `{"message": "passwordnotmatch"}` | Password and password repeat don't match
 **401** | `{"message": "wrongapikey"}` | If API key is invalid
 
 ## iao
