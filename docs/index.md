@@ -116,6 +116,7 @@ HTTP code | JSON response | Explaination
 **503** | `{"message": "error"}` | DB error, user not created
 **400** | `{"message": "dataincomplete"}` | Not all fields are filled in
 **403** | `{"message": "exists"}` | There already is a user with that email
+**405** | `{"message": "domainnotallowed"}` | This domain is not allowed. Only @leerling.stellamariscollege.nl and @stichtinglvo.nl is allowed
 **409** | `{"message": "passwordnotmatch"}` | Password and password repeat don't match
 **401** | `{"message": "wrongapikey"}` | If API key is invalid
 
